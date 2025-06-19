@@ -27,4 +27,5 @@ jobs:
     - run: npm ci
     - run: |
           touch .env
-          echo "${{secrets.ENV_REMOTE}}" .env
+          echo "${{secrets.ENV_REMOTE}}" > .env
+    - run: pm2 restart backend
