@@ -28,3 +28,4 @@ jobs:
     - run: |
           touch .env
           echo "${{ secrets.ENV_REMOTE }}" > .env
+    - run: pm2 restart banckend
